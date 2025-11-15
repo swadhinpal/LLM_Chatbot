@@ -5,6 +5,8 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 const models = [
   { id: 'llama3.2', name: 'Llama 3.2 (Ollama)' },
   { id: 'gemini', name: 'Gemini (Google AI)' },
+  { id: 'codegemma:2b', name: 'Codegemma (Ollama)' },
+  { id: 'qwen', name: 'Qwen 2.5 Coder (HF)' },
 ]
 
 export default function ModelSelector({ selectedModel, setSelectedModel }) {
