@@ -414,7 +414,7 @@ const Chatbot = () => {
 
               {msg.sender === 'bot' && (
                 <div className="text-xs text-gray-500 mt-1">
-                  {msg.model === 'llama3.2' ? 'Llama 3.2' : 'Gemini'}
+                  {msg.model === 'llama3.2' ? 'Llama 3.2' : msg.model === 'gemini' ?'Gemini': msg.model === 'qwen' ? 'Qwen':'Codegemma'}
                 </div>
               )}
             </div>
