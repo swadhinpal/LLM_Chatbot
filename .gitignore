@@ -1,0 +1,122 @@
+# ----------------------------------------
+# Node.js / React (Frontend)
+# ----------------------------------------
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Vite local config
+*.local
+
+# ----------------------------------------
+# Python (Backend)
+# ----------------------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C Extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+hypothesis/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# MyPy, Pyre, Pytype
+.mypy_cache/
+.dmypy.json
+pyre_check/
+pytype/
+
+# ----------------------------------------
+# OS generated files
+# ----------------------------------------
+
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------
+# Editors & IDEs
+# ----------------------------------------
+
+.vscode/*
+!.vscode/extensions.json  # Allow recommended extensions file
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----------------------------------------
+# Project-specific optional ignores
+# ----------------------------------------
+
+# API keys or secrets
+secret_key.txt
+api_keys.json
+
+# Ollama model downloads (optional)
+ollama_models/
+
+# Python dotenv files
+.env.backend
+.env.frontend
