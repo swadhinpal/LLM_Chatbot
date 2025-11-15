@@ -156,15 +156,19 @@ async def chat_endpoint(req: ChatRequest):
     try:
         if model.startswith("llama"):
             from utils import ollama as model_client
+        elif model.startswith("code"):
+            from utils import ollama1 as model_client
         elif model.startswith("gemini"):
             from utils import gemini as model_client
+        elif model.startswith("qwen"):
+            from utils import hf_router as model_client
         else:
             return ChatResponse(text="Requested model not supported.", model=req.model)
 
         with concurrent.futures.ThreadPoolExecutor() as executor:
             future = executor.submit(model_client.generate_response, req.messages)
             try:
-                generated_text = future.result(timeout=20)
+                generated_text = future.result(timeout=40)
             except concurrent.futures.TimeoutError:
                 return ChatResponse(text="", model=req.model, error="timed out")
 
